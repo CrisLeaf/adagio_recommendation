@@ -43,6 +43,8 @@ def replace_iso(string):
     string = string.replace("\u00b0", " celsius")
     string = string.replace("\u201c", "'")
     string = string.replace("\u201d", "'")
+    string = string.replace("\u00b4", "'")
+    string = string.replace("\u00bac", "celsius")
     return string
 
 def replace_uper(string):
@@ -96,10 +98,10 @@ class DataScraperItem(scrapy.Item):
     format = scrapy.Field(input_processor=MapCompose(
         remove_tags, replace_uper, replace_iso, remove_spaces, blank_to_none
     ), output_processor=TakeFirst())
-    description = scrapy.Field(input_processor=MapCompose(
+    description_1 = scrapy.Field(input_processor=MapCompose(
         remove_tags, replace_uper, replace_iso, remove_spaces, blank_to_none
     ), output_processor=TakeFirst())
-    ingredients = scrapy.Field(input_processor=MapCompose(
+    description_2 = scrapy.Field(input_processor=MapCompose(
         remove_tags, replace_uper, replace_iso, remove_spaces, blank_to_none
     ), output_processor=TakeFirst())
     temperature = scrapy.Field(input_processor=MapCompose(
@@ -111,5 +113,4 @@ class DataScraperItem(scrapy.Item):
     amount = scrapy.Field(input_processor=MapCompose(
         remove_tags, replace_uper, replace_iso, remove_spaces, blank_to_none
     ), output_processor=TakeFirst())
-
     link = scrapy.Field(input_processor=MapCompose(), output_processor=TakeFirst())
