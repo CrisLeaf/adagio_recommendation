@@ -24,21 +24,48 @@ The data was scraped from the [Adagio website](https://adagio.cl/) using
 - [scrapy](https://scrapy.org/)
 
 
-## Results
+## Methodology
 
-We obtained a working recommendation system: 3 of 4 total recommendations are chosen  taking into account the following variables:
+First we vectorized each of the following variables extracted from data:
 
 - Product description,
 - Product rating,
 - Product labels,
-- Availability,
+- Availability.
 
-and last recommendation is chosen completely at random, only taking into account the Availability. The latter because there are so many events in life, that no formula can model it perfectly. And we have to make room for randomness.
+to be presented as vectors.
 
-## Example
+Next we defined a way to measure similarities. Calculating the cosine of the angle formed by two vectors. As low angles means similar direction vectors. After we gathered this information into square matrices.
+
+Finally, we summed the four matrices to pass them through a selection algorithm.
+
+
+## Results
+
+We obtained a working recommendation system: 
+
+3 of 4 total recommendations are chosen taking into account the above variables. 
+And the last recommendation is chosen completely at random, only taking into account the Availability. The latter because there are so many events in life, that no formula can model it perfectly. And we have to make room for randomness.
+
+## Examples
+
+Example 1:
 
 <img src="images/products1.png"/> 
+
 <img src="images/products2.png"/> 
+
+**Here, 4 Pomos Flavour Explotion is the random recommendation.**
+
+Example 2:
+
+
+<img src="images/products3.png"/> 
+
+<img src="images/products4.png"/> 
+
+**Here, Day Dream is the random recommendation.**
+
 
 ## Support
 
