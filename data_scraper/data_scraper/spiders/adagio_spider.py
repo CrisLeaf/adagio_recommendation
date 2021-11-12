@@ -3,7 +3,7 @@ from data_scraper.items import DataScraperItem
 from scrapy.loader import ItemLoader
 
 class AdagioSpider(scrapy.Spider):
-	name = "tes"
+	name = "adagio"
 	start_urls = [
 		"https://adagio.cl/collections/alergias",
 		"https://adagio.cl/collections/arabica",
