@@ -4,7 +4,7 @@ One of the secrets of many internet services (Youtube, Netflix, Tiktok) is their
 
 **This idea can be translated to internet shopping websites**. To prevent the consumer from leaving. And to keep them looking for all product the page can offer.
 
-That is what we have done in this project, with pretty good results.
+That is what we have done in this project, with pretty good results. $a$
 
 
 ## Requirements
