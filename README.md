@@ -9,13 +9,13 @@ That is what we have done in this project, with pretty good results.
 
 ## Requirements
 
-The Python Notebook `recommendation_system.ipynb` was written in a Python 3.9 environment and using the following libraries:
+Run the Python Notebook `recommendation_system.ipynb` in an ipykernel with Python 3.9 environment as **GitHub does not support inline Latex formulas**.
 
+The following libraries are required:
 
 - [NumPy](http://www.numpy.org/)
 - [Pandas](http://pandas.pydata.org/)
 - [Scikit-Learn](http://scikit-learn.org/stable/)
-
 
 ## Dataset
 
